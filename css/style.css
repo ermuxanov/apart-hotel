@@ -117,6 +117,7 @@ body {
   z-index: -1;
 }
 .header__content-inner {
+  position: relative;
   display: flex;
   align-items: center;
   height: 800px;
@@ -135,16 +136,22 @@ body {
   flex-direction: column;
   gap: 10px;
   color: #fff;
-  /* opacity: 0.5; */
 }
 .hotel__city-item {
   padding-bottom: 20px;
   border-bottom: 1px solid #00000027;
+  opacity: 0.5;
 }
 .hotel__city-name {
   font-size: 42px;
   line-height: 50px;
   position: relative;
+}
+.hotel__city-name a {
+  opacity: 0.5;
+}
+.hotel__city-name > a:hover {
+  opacity: 1;
 }
 .hotel__city-new::after {
   position: absolute;
@@ -160,4 +167,43 @@ body {
   height: 30px;
   width: 50px;
   border-radius: 15px;
+}
+.rental {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: -50px;
+}
+.longRental,
+.shortRental {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  padding-left: 30px;
+}
+.longRental {
+  background: orange;
+  color: #fff;
+}
+.shortRental {
+  background: #fff;
+  color: #000;
+}
+.longRental__link,
+.shortRental__link {
+  width: 150px;
+  text-align: center;
+  padding: 10px 30px;
+  border-radius: 30px;
+}
+.longRental__link {
+  background: #fff;
+}
+.shortRental__link {
+  background: orange;
+  color: #fff;
 }
